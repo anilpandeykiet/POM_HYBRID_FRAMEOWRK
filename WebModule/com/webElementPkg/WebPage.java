@@ -28,6 +28,13 @@ public class WebPage {
 
 	}
 
+	/**
+	 * Search text on web page.
+	 *
+	 * @param driver the driver
+	 * @param textToSearch the text to search
+	 * @return the boolean
+	 */
 	public static Boolean searchTextOnWebPage(WebDriver driver, String textToSearch) {
 
 		String bodyText = driver.findElement(By.tagName("body")).getText();
@@ -59,6 +66,10 @@ public class WebPage {
 		WebDriverWait wait = new WebDriverWait(driver, 30);
 		// wait for jQuery to load
 		ExpectedCondition<Boolean> jQueryLoad = new ExpectedCondition<Boolean>() {
+			
+			/* (non-Javadoc)
+			 * @see com.google.common.base.Function#apply(java.lang.Object)
+			 */
 			@Override
 			public Boolean apply(WebDriver driver) {
 				try {
