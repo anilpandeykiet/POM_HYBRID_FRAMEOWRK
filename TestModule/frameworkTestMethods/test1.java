@@ -1,15 +1,6 @@
 package frameworkTestMethods;
-import java.util.Iterator;
-import java.util.Properties;
-import java.util.Set;
-
-import javax.mail.Message;
-import javax.mail.Session;
-import javax.mail.internet.MimeBodyPart;
-
 import emailPkg.EmailSender;
 import fileReadingPkg.ReadPropertyFile;
-import fileReadingPkg.ReadTextFile;
 
 /**
  * 
