@@ -10,7 +10,7 @@ import org.openqa.selenium.ie.InternetExplorerDriver;
 import org.openqa.selenium.remote.DesiredCapabilities;
 
 /**
- * @author cpandeak
+ * @author Anil Pandey
  *
  */
 public class LocalWebDriverFactory {
@@ -33,14 +33,14 @@ public class LocalWebDriverFactory {
 						true);
 				System.setProperty("webdriver.ie.driver", userDirectory + "IEDriverServer.exe");
 				driver = new InternetExplorerDriver(capabilities);
-				driver.manage().window().fullscreen();
+				driver.manage().window().maximize();
 				launchUrl(URL);
 
 			} else if (browserName.trim().equalsIgnoreCase("FIREFOX")) {
 				System.setProperty("webdriver.gecko.driver", userDirectory + "geckodriver.exe");
 				driver = new FirefoxDriver();
-				driver.manage().window().fullscreen();
-
+				driver.manage().window().maximize();
+				launchUrl(URL);
 			} else {
 				throw new Exception("'" + browserName + "'" + " is not a valid browser");
 			}

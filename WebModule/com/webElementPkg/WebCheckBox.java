@@ -4,7 +4,7 @@
 package com.webElementPkg;
 
 /**
- * @author cpandeak
+ * @author Anil Pandey
  *
  */
 public class WebCheckBox {

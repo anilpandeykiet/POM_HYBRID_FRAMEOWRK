@@ -4,7 +4,7 @@
 package fileReadingPkg;
 
 /**
- * @author cpandeak
+ * @author Anil Pandey
  *
  */
 public class ReadTextFile {

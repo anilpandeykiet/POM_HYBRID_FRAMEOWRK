@@ -14,7 +14,7 @@ import com.relevantcodes.extentreports.ExtentReports;
 import com.relevantcodes.extentreports.ExtentTest;
 
 /**
- * @author cpandeak
+ * @author Anil Pandey
  *
  */
 public class ReportManager {

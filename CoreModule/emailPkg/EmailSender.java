@@ -18,7 +18,7 @@ import javax.mail.internet.MimeMessage;
 import javax.mail.internet.MimeMultipart;
 
 /**
- * @author cpandeak
+ * @author Anil Pandey
  *
  */
 public class EmailSender {
