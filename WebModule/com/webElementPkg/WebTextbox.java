@@ -33,8 +33,12 @@ public class WebTextbox {
 				visibilityStatus = element.isEnabled();
 			}
 		} catch (Exception e) {
-			// nothing to catch
+			// nothing can be done at this point
 		}
 		return visibilityStatus;
+	}
+	
+	public static void clearWebInput(WebElement element) {
+		element.clear();
 	}
 }

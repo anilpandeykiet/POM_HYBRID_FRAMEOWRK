@@ -22,6 +22,14 @@ import com.relevantcodes.extentreports.LogStatus;
  */
 public class WebUtilities {
 
+	/**
+	 * Checks if is element present.
+	 *
+	 * @param driver the driver
+	 * @param element the element
+	 * @param logger the logger
+	 * @return true, if is element present
+	 */
 	public static boolean isElementPresent(WebDriver driver, WebElement element, ExtentTest logger) {
 		boolean elementPresent = false;
 
@@ -37,6 +45,13 @@ public class WebUtilities {
 		return elementPresent;
 	}
 
+	/**
+	 * Wait for element to appear.
+	 *
+	 * @param driver the driver
+	 * @param element the element
+	 * @param logger the logger
+	 */
 	public static void waitForElementToAppear(WebDriver driver, WebElement element, ExtentTest logger) {
 
 		try {
@@ -52,6 +67,14 @@ public class WebUtilities {
 		}
 	}
 
+	/**
+	 * Wait for element to disappear.
+	 *
+	 * @param driver the driver
+	 * @param element the element
+	 * @param logger the logger
+	 * @return true, if successful
+	 */
 	public static boolean waitForElementToDisappear(WebDriver driver, WebElement element, ExtentTest logger) {
 		try {
 			Wait<WebDriver> fluentWait = new FluentWait<WebDriver>(driver).withTimeout(60, TimeUnit.SECONDS)
@@ -66,6 +89,14 @@ public class WebUtilities {
 		}
 	}
 	
+	/**
+	 * Gets the element attribute value.
+	 *
+	 * @param element the element
+	 * @param logger the logger
+	 * @param attributeName the attribute name
+	 * @return the element attribute value
+	 */
 	public static String getElementAttributeValue(WebElement element, ExtentTest logger, String attributeName) {
 		String attributeValue = null;
 		
@@ -74,6 +105,13 @@ public class WebUtilities {
 		return attributeValue;
 	}
 	
+	/**
+	 * Wait for element staleness.
+	 *
+	 * @param driver the driver
+	 * @param element the element
+	 * @return true, if successful
+	 */
 	public static boolean waitForElementStaleness(WebDriver driver, WebElement element) {
 		boolean staleStatus = new FluentWait<WebDriver>(driver)
 				.withTimeout(60, TimeUnit.SECONDS)
@@ -84,6 +122,12 @@ public class WebUtilities {
 	}
 	
 	
+	/**
+	 * Static wait.
+	 *
+	 * @param driver the driver
+	 * @param timeToWait the time to wait
+	 */
 	public static void staticWait(WebDriver driver, int timeToWait) {
 		
 		try {
