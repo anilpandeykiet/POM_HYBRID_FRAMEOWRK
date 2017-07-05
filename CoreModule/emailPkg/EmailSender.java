@@ -24,7 +24,7 @@ import javax.mail.internet.MimeMultipart;
 public class EmailSender {
 
 	private static String hostName = "webmail.jci.com";
-	private static String port = null;
+	//private static String port = null;
 	private static String fromAddress = null;
 	private static String toAddressList = "";
 	private static String emailSubject = "";
@@ -34,7 +34,7 @@ public class EmailSender {
 	private static Properties properties = null;
 	private static Session session = null;
 	private static Message message = null;
-	private static MimeMessage mimeMessage = null;
+	//private static MimeMessage mimeMessage = null;
 	private static MimeBodyPart bodyPart = null;
 
 	public static void sendEmail(boolean sendEmail) {

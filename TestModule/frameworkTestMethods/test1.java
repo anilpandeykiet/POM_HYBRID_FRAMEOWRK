@@ -1,5 +1,4 @@
 package frameworkTestMethods;
-import java.net.URL;
 
 /**
  * 
