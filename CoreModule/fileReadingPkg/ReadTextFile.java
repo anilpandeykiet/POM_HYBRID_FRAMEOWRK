@@ -4,6 +4,7 @@
 package fileReadingPkg;
 
 import java.io.BufferedReader;
+import java.io.File;
 import java.io.FileReader;
 import java.io.IOException;
 
@@ -18,15 +19,17 @@ public class ReadTextFile {
 	private static String fileContent = null;
 	private static BufferedReader bufferedReader = null;
 	private static FileReader fileReader = null;
+	private static File txtFile= null;
 
 	private ReadTextFile(String textFilePath) {
 		try {
-			fileReader = new FileReader(textFilePath);
+			File txtFile = new File(textFilePath);
+			fileReader = new FileReader(txtFile);
 			bufferedReader = new BufferedReader(fileReader);
 
 		} catch (Exception e) {
 			// e.printStackTrace();
-			System.out.println("Error reading the text file: " + textFilePath + "\n" + e.getMessage());
+			System.out.println("Error reading the text file: " + txtFile + "\n" + e.getMessage());
 		}
 	}
 
