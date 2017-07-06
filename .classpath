@@ -64,5 +64,6 @@
 	<classpathentry kind="lib" path="ImpLibs/MiscellaneousLibs/MailLib/javax.mail-api-1.6.0-rc2-javadoc.jar"/>
 	<classpathentry kind="lib" path="ImpLibs/SeleniumLibs/selenium-java-3.4.0/selenium-api-3.4.0-sources.jar"/>
 	<classpathentry kind="lib" path="ImpLibs/SeleniumLibs/selenium-java-3.4.0/selenium-api-3.4.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="ImpLibs/MiscellaneousLibs/MailLib/mail-1.5.0-b01.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
