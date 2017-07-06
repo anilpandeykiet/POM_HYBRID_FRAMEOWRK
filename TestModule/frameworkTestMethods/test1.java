@@ -1,13 +1,15 @@
 package frameworkTestMethods;
+
 import emailPkg.EmailSender;
 import fileReadingPkg.ReadPropertyFile;
+
 
 /**
  * 
  */
 
 /**
- * @author cpandeak
+ * @author Anil Pandey
  *
  */
 public class test1 {

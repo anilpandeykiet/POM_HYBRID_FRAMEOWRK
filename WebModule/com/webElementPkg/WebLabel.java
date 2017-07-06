@@ -4,8 +4,9 @@
 package com.webElementPkg;
 
 /**
- * @author cpandeak
+ * The Class WebLabel.
  *
+ * @author Anil Pandey
  */
 public class WebLabel {
 

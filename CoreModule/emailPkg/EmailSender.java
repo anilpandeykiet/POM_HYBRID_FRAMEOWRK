@@ -24,13 +24,14 @@ import fileReadingPkg.ReadTextFile;
 
 // TODO: Auto-generated Javadoc
 /**
- * @author cpandeak
+ * @author Anil Pandey
  *
  */
 public class EmailSender {
 
 	private static String hostName = null;
 	private static String port = null;
+
 	private static String fromAddress = null;
 	private static String toAddressList = null;
 	private static String emailSubject = null;
@@ -41,6 +42,9 @@ public class EmailSender {
 	private static Properties properties = null;
 	private static Session session = null;
 	private static Message message = null;
+
+	//private static MimeMessage mimeMessage = null;
+
 	private static MimeBodyPart bodyPart = null;
 
 	private static ReadPropertyFile rpr = null;

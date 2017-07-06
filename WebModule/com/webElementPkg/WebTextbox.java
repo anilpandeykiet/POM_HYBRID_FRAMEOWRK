@@ -3,39 +3,65 @@
  */
 package com.webElementPkg;
 
+
 import org.openqa.selenium.WebDriver;
-import org.openqa.selenium.WebElement;
+
 
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+
+// TODO: Auto-generated Javadoc
 /**
- * @author anilpandey
+ * The Class WebTextbox.
  *
+ * @author Anil Pandey
  */
 public class WebTextbox {
 
-	public static void sendTextToWebInput(WebDriver driver, ExtentTest logger, WebElement element, String testToWrite){
-		
+	/**
+	 * Send text to web input.
+	 *
+	 * @param element the element
+	 * @param textToEnter the text to enter
+	 * @param logger the logger
+	 */
+	public static void sendTextToWebInput(WebElement element, String textToEnter, ExtentTest logger) {
 		try {
 			if (element != null) {
-				element.sendKeys(testToWrite);
-				logger.log(LogStatus.PASS, "Text <label>'"+testToWrite +"'</label> written successfully in <label>'"+element.getAttribute("name")+"'</label>");
+				element.sendKeys(textToEnter);
+				logger.log(LogStatus.INFO, "Text '" + textToEnter + "' successfully entered in the text box");
 			}
 		} catch (Exception e) {
-			logger.log(LogStatus.FAIL, "Failed to find <label>'"+element.getAttribute("name")+"'</label>");
+			logger.log(LogStatus.ERROR,
+					"Failed to enter text '" + textToEnter + "' in the text box</br>" + e.getStackTrace());
 		}
 	}
-	
-	public static String getWebInputText(WebDriver driver, ExtentTest logger, WebElement element){
-		String elementText = null;
+
+	/**
+	 * Checks if is web input editable.
+	 *
+	 * @param element the element
+	 * @return true, if is web input editable
+	 */
+	public static boolean isWebInputEditable(WebElement element) {
+		boolean visibilityStatus = false;
 		try {
 			if (element != null) {
-				elementText = element.getText().trim();
+				visibilityStatus = element.isEnabled();
 			}
 		} catch (Exception e) {
-			logger.log(LogStatus.FAIL, "Failed to find the <label>'"+element.getAttribute("name")+ "'</label>");
+			// nothing can be done at this point
 		}
-		return elementText;
+		return visibilityStatus;
+	}
+	
+	/**
+	 * Clear web input.
+	 *
+	 * @param element the element
+	 */
+	public static void clearWebInput(WebElement element) {
+		element.clear();
 	}
 }
