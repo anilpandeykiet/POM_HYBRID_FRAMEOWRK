@@ -7,12 +7,20 @@ import java.util.Set;
 
 import org.openqa.selenium.WebDriver;
 
+// TODO: Auto-generated Javadoc
 /**
- * @author Anil Pandey
+ * The Class WebBrowser.
  *
+ * @author Anil Pandey
  */
 public class WebBrowser {
 
+	/**
+	 * Switch to child window.
+	 *
+	 * @param driver the driver
+	 * @param childPagetitle the child pagetitle
+	 */
 	public static void switchToChildWindow(WebDriver driver, String childPagetitle) {
 		Set<String> allWin = driver.getWindowHandles();
 		String parentWindow = driver.getWindowHandle();
@@ -26,6 +34,11 @@ public class WebBrowser {
 		}
 	}
 
+	/**
+	 * Switch to child window.
+	 *
+	 * @param driver the driver
+	 */
 	public static void switchToChildWindow(WebDriver driver) {
 		Set<String> allWin = driver.getWindowHandles();
 		String parentWindow = driver.getWindowHandle();

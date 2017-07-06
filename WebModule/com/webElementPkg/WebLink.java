@@ -17,8 +17,8 @@ public class WebLink {
 	/**
 	 * Click on web link.
 	 *
-	 * @param WebDriver the driver
-	 * @param WebElement the element
+	 * @param driver the driver
+	 * @param element the element
 	 */
 	public static void clickOnWebLink(WebDriver driver, WebElement element) {
 		try {

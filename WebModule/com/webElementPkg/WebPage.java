@@ -11,12 +11,22 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import com.relevantcodes.extentreports.ExtentTest;
 
+// TODO: Auto-generated Javadoc
 /**
- * @author Anil Pandey
+ * The Class WebPage.
  *
+ * @author Anil Pandey
  */
 public class WebPage {
 
+	/**
+	 * Search text on web page.
+	 *
+	 * @param driver the driver
+	 * @param logger the logger
+	 * @param textToSearch the text to search
+	 * @return true, if successful
+	 */
 	public static boolean searchTextOnWebPage(WebDriver driver, ExtentTest logger, String textToSearch) {
 
 		boolean textFound = false;
@@ -28,6 +38,12 @@ public class WebPage {
 		return textFound;
 	}
 
+	/**
+	 * Wait for page to load.
+	 *
+	 * @param driver the driver
+	 * @return true, if successful
+	 */
 	public static boolean waitForPageToLoad(WebDriver driver) {
 		boolean pageLoadStatus = false;
 		WebDriverWait wait = new WebDriverWait(driver, 60);

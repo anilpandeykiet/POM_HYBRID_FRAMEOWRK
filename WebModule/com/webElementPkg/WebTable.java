@@ -10,17 +10,19 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
+// TODO: Auto-generated Javadoc
 /**
- * @author Anil Pandey
+ * The Class WebTable.
  *
+ * @author Anil Pandey
  */
 public class WebTable {
 
 	/**
-	 * @param WebDriver
-	 *            driver
-	 * @param WebElement
-	 *            webTableId
+	 * Gets the all table rows.
+	 *
+	 * @param driver the driver
+	 * @param webTableId the web table id
 	 * @return {@code List<WebElement>}</br>
 	 * 
 	 *         <br>
@@ -42,9 +44,11 @@ public class WebTable {
 	}
 
 	/**
-	 * @param driver
-	 * @param tableRow
-	 * @return
+	 * Gets the all columns in table row.
+	 *
+	 * @param driver the driver
+	 * @param tableRow the table row
+	 * @return the all columns in table row
 	 */
 	public static List<WebElement> getAllColumnsInTableRow(WebDriver driver, WebElement tableRow) {
 		List<WebElement> tableCols = new ArrayList<WebElement>();

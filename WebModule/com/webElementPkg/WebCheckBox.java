@@ -4,8 +4,9 @@
 package com.webElementPkg;
 
 /**
- * @author Anil Pandey
+ * The Class WebCheckBox.
  *
+ * @author Anil Pandey
  */
 public class WebCheckBox {
 

@@ -8,12 +8,21 @@ import org.openqa.selenium.WebElement;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+// TODO: Auto-generated Javadoc
 /**
- * @author Anil Pandey
+ * The Class WebTextbox.
  *
+ * @author Anil Pandey
  */
 public class WebTextbox {
 
+	/**
+	 * Send text to web input.
+	 *
+	 * @param element the element
+	 * @param textToEnter the text to enter
+	 * @param logger the logger
+	 */
 	public static void sendTextToWebInput(WebElement element, String textToEnter, ExtentTest logger) {
 		try {
 			if (element != null) {
@@ -26,6 +35,12 @@ public class WebTextbox {
 		}
 	}
 
+	/**
+	 * Checks if is web input editable.
+	 *
+	 * @param element the element
+	 * @return true, if is web input editable
+	 */
 	public static boolean isWebInputEditable(WebElement element) {
 		boolean visibilityStatus = false;
 		try {
@@ -38,6 +53,11 @@ public class WebTextbox {
 		return visibilityStatus;
 	}
 	
+	/**
+	 * Clear web input.
+	 *
+	 * @param element the element
+	 */
 	public static void clearWebInput(WebElement element) {
 		element.clear();
 	}

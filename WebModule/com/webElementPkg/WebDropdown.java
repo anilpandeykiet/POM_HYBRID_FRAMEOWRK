@@ -6,15 +6,19 @@ package com.webElementPkg;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.Select;
 
+// TODO: Auto-generated Javadoc
 /**
- * @author Anil Pandey
+ * The Class WebDropdown.
  *
+ * @author Anil Pandey
  */
 public class WebDropdown {
 
 	/**
-	 * @param element
-	 * @param optionToSelect
+	 * Select option by visible text.
+	 *
+	 * @param element the element
+	 * @param optionToSelect the option to select
 	 */
 	public static void selectOptionByVisibleText(WebElement element, String optionToSelect) {
 		if (element != null) {
@@ -26,8 +30,10 @@ public class WebDropdown {
 	}
 	
 	/**
-	 * @param element
-	 * @param indexNo
+	 * Select option by index.
+	 *
+	 * @param element the element
+	 * @param indexNo the index no
 	 */
 	public static void selectOptionByIndex(WebElement element, int indexNo) {
 		if (element != null) {
@@ -39,8 +45,10 @@ public class WebDropdown {
 	}
 	
 	/**
-	 * @param element
-	 * @param value
+	 * Select option by value.
+	 *
+	 * @param element the element
+	 * @param value the value
 	 */
 	public static void selectOptionByValue(WebElement element, String value) {
 		if (element != null) {

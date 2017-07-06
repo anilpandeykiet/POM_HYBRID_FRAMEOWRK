@@ -16,9 +16,11 @@ import org.openqa.selenium.support.ui.Wait;
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
 
+// TODO: Auto-generated Javadoc
 /**
- * @author Anil Pandey
+ * The Class WebUtilities.
  *
+ * @author Anil Pandey
  */
 public class WebUtilities {
 
