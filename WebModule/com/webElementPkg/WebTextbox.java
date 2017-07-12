@@ -4,8 +4,7 @@
 package com.webElementPkg;
 
 
-import org.openqa.selenium.WebDriver;
-
+import org.openqa.selenium.WebElement;
 
 import com.relevantcodes.extentreports.ExtentTest;
 import com.relevantcodes.extentreports.LogStatus;
