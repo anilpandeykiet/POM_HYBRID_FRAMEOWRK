@@ -18,7 +18,7 @@ public class Test2 extends BaseClass{
 	public void firstTest(Method method){
 
 		System.out.println(driver.getTitle());
-		System.out.println(WebCookies.getAllCookies(driver));
+		//System.out.println(WebCookies.getAllCookies(driver));
 
 		//System.out.println(driver.getTitle());
 

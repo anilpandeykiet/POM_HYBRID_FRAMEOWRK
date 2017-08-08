@@ -7,7 +7,6 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 
 import com.relevantcodes.extentreports.ExtentTest;
-import com.relevantcodes.extentreports.LogStatus;
 
 // TODO: Auto-generated Javadoc
 /**
@@ -31,7 +30,6 @@ public class WebButton {
 				element.click();
 			}
 		} catch (Exception e) {
-			logger.log(LogStatus.ERROR, "Error clicking the button</br>"+e.getStackTrace());
-		}
+			}
 	}
 }
