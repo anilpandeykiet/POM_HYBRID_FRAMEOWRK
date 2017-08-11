@@ -9,8 +9,6 @@ import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentTest;
-import com.webElementPkg.WebUtilities;
-
 import corePkg.BaseClass;
 import googlePageObjects.SearchAndVerifyPageObjects;
 
