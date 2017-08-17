@@ -95,7 +95,7 @@ public class SearchAndVerifyPageObjects {
 			if (element != null) {
 				WebTextbox.clearWebInput(element);
 				WebTextbox.sendTextToWebInput(element, textToSearch, logger);
-				WebTextbox.sendKeysNTimes(element, 2, Keys.TAB);
+				//WebTextbox.sendKeysNTimes(element, 2, Keys.TAB);
 			}
 		} catch (Exception e) {
 			logger.log(LogStatus.FAIL, "Failed to find the search filed" + e.getStackTrace().toString());
@@ -107,7 +107,7 @@ public class SearchAndVerifyPageObjects {
 		WebElement element = get_SearchButton();
 		try {
 			if (element != null) {
-				MouseOperations.hoverMouseOnWebElement(driver, logger, element);
+				//MouseOperations.hoverMouseOnWebElement(driver, logger, element);
 				WebButton.webButtonClick(driver, logger, element);
 				logger.log(LogStatus.PASS, "'Search Button' clicked successfully");
 			}

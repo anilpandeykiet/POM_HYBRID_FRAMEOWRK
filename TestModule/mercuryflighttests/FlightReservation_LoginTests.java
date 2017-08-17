@@ -24,16 +24,17 @@ public class FlightReservation_LoginTests extends BaseClass {
 	private ExtentTest logger = null;
 
 	private static FlightReservation_Login frLoginPage = null;
+	private static String testCategory = "Mercury Flight Reservation - Login";
 
 	private void intialize() {
 		driver = BaseClass.driver;
 		logger = BaseClass.logger;
-
 		frLoginPage = new FlightReservation_Login(driver, logger);
+		logger.assignCategory(testCategory);
 	}
 
 	@Parameters({ "username", "password" })
-	@Test(description = "Successful Login to Application")
+	@Test(description = "Mercury Flight Reservation - Successful Login to Application")
 	public void successfulLogin(String username, String password, Method method) {
 		intialize();
 		boolean testStatus = false;

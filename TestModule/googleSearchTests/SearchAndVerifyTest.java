@@ -21,7 +21,7 @@ public class SearchAndVerifyTest extends BaseClass{
 	private static SearchAndVerifyPageObjects searchPObj = null;
 	private WebDriver driver = null;
 	private ExtentTest logger = null;
-	private static String testCategory = "Search And Verify";
+	private static String testCategory = "Google Search";
 	
 	public SearchAndVerifyTest() {
 
@@ -34,7 +34,7 @@ public class SearchAndVerifyTest extends BaseClass{
 		searchPObj = new SearchAndVerifyPageObjects(driver, logger);
 	}
 	
-	@Test(description="First Test", groups= {"Search And Verify"})
+	@Test(description="Google - Search and Verify the search result", groups= {"Search And Verify"})
 	public void test123(Method method) {
 		initialize();
 		boolean testStatus = false;

@@ -20,15 +20,17 @@ public class FlightReservation_FindFlight_Tests extends BaseClass {
 
 	private static FlightReservation_Login loginPage = null;
 	private static FlightReservation_FlightFinder_Page flightFinderPage = null;
-
+	private static String testCategory = "Mercury Flight Reservation - Find Flight";
+	
 	private static void initialize() {
 		loginPage = new FlightReservation_Login(driver, logger);
 		flightFinderPage = new FlightReservation_FlightFinder_Page(driver, logger);
+		logger.assignCategory(testCategory);
 	}
 
 	@Parameters({ "username", "password", "tripType", "noOfPassengers", "departFrom", "departmonth", "departDay",
 			"arrivingIn", "arrivingMonth", "arrivingDay", "serviceClass", "airlineName" })
-	@Test(description = "Find a flight")
+	@Test(description = "Mercury Flight Reservation - Find a flight")
 	public void findANewFlight(String username, String password, String tripType, String noOfPassengers,
 			String departFrom, String departmonth, String departDay, String arrivingIn, String arrivingMonth,
 			String arrivingDay, String serviceClass, String airlineName, Method method) {
@@ -41,9 +43,7 @@ public class FlightReservation_FindFlight_Tests extends BaseClass {
 			boolean loginStatus = loginPage.loginToApplication(username, password, homePageTitle);
 
 			if (loginStatus) {
-				System.out.println("tripType: " + tripType);
-				System.out.println("serviceClass: " + serviceClass);
-				System.out.println("airlineName: " + airlineName);
+
 				testStatus = flightFinderPage.findANewFlight(tripType, noOfPassengers, departFrom, departmonth,
 						departDay, arrivingIn, arrivingMonth, arrivingDay, serviceClass, airlineName);
 			}
