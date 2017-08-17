@@ -36,7 +36,8 @@ public class WebTextbox {
 			}
 		} catch (Exception e) {
 			logger.log(LogStatus.ERROR,
-					"Failed to enter text '" + textToEnter + "' in the text box</br>" + e.getStackTrace());
+					"Failed to enter text '" + textToEnter + "' in the text box</br>" + e.getStackTrace().toString());
+			e.printStackTrace();;
 		}
 	}
 	
