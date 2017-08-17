@@ -39,9 +39,11 @@ public class WebTextbox {
 					"Failed to enter text '" + textToEnter + "' in the text box</br>" + e.getStackTrace());
 		}
 	}
-
-	public static void sendKeysToWebInput(WebDriver driver, WebElement element) {
-
+	
+	public static void clearTextBox(WebElement element) {
+		if (element != null) {
+			element.clear();
+		}
 	}
 
 	public static void sendKeysNTimes(WebElement element, int numberOfTimes, Keys keyName) {

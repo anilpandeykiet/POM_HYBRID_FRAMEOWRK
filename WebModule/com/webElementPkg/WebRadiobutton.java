@@ -31,9 +31,17 @@ public class WebRadiobutton {
 		}
 	}
 
-	// FInd the radio button corresponding the input
-
 	public static void selectRadioButton(WebDriver driver, ExtentTest logger, WebElement element) {
+		if (element != null) {
+			if (!element.isSelected()) {
+				element.click();
+				logger.log(LogStatus.INFO, "Radio button selected successfully");
+			}else {
+				logger.log(LogStatus.INFO, "Radio button is already selected");
+			}
+		}else {
+			logger.log(LogStatus.INFO, "Unable to find the radio button");
+		}
 	}
 
 }

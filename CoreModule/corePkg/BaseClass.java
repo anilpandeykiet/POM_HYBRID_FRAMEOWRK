@@ -8,6 +8,7 @@ import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.BeforeSuite;
+import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 
 import com.relevantcodes.extentreports.ExtentReports;
@@ -35,8 +36,9 @@ public class BaseClass {
 	public static ReadPropertyFile rpr = null;
 	private static String sendEmail = null;
 
+	@Parameters({"baseURL"})
 	@BeforeSuite
-	public void beforeSuite() {
+	public void beforeSuite(String baseURL) {
 		try {
 
 			rpr = ReadPropertyFile.getInstance("./TestResources/TestConfig/test.properties");
@@ -44,7 +46,14 @@ public class BaseClass {
 			reportFile = rpr.getKey("reportFile");
 			emailConfigFile = rpr.getKey("emailConfigFile");
 			sendEmail = rpr.getKey("sendEmail");
-			baseURL = rpr.getKey("baseURL");
+			
+			// If the we are testing single Web Application. Mention the same in 
+			//test.properties file and uncomment below line.
+			
+			//baseURL = rpr.getKey("baseURL");
+			
+			// Commnet this line if previous line is uncommented
+			BaseClass.baseURL = baseURL;
 			browserName = rpr.getKey("browserName");
 			reporter = ReportManager.getReporter(reportFile, true);
 			
@@ -57,7 +66,7 @@ public class BaseClass {
 	@BeforeMethod
 	public void beforeMethod(Method method) {
 		try {
-			testMethodName = method.getName();
+			testMethodName = method.getAnnotation(Test.class).description();
 			logger = reporter.startTest(browserName.toUpperCase() + " - "+ testMethodName);
 			driver = LocalWebDriverFactory.openWebUrl(browserName, baseURL);
 		} catch (Exception e) {

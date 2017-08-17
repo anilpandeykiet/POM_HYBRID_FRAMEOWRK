@@ -1,0 +1,29 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Mercury Flight Demo Tests">
+	<parameter name="baseURL" value="http://newtours.demoaut.com/"></parameter>
+<!-- 	<test name="Login">
+		<parameter name="username" value="demo" />
+		<parameter name="password" value="demo" />
+		<classes>
+			<class name="mercuryflighttests.FlightReservation_LoginTests" />
+		</classes>
+	</test> -->
+	<test name="FindFlight">
+		<parameter name="username" value="demo" />
+		<parameter name="password" value="demo" />
+		<parameter name="tripType" value="Round Trip" />
+		<parameter name="noOfPassengers" value="1" />
+		<parameter name="departFrom" value="Acapulco" />
+		<parameter name="departmonth" value="August" />
+		<parameter name="departDay" value="17" />
+		<parameter name="arrivingIn" value="Frankfurt" />
+		<parameter name="arrivingMonth" value="September" />
+		<parameter name="arrivingDay" value="17" />
+		<parameter name="serviceClass" value="First class" />
+		<parameter name="airlineName" value="Unified Airlines" />
+		<classes>
+			<class name="mercuryflighttests.FlightReservation_FindFlight_Tests" />
+		</classes>
+	</test>
+</suite>

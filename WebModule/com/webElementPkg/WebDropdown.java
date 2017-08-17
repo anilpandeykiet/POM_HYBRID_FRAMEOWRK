@@ -58,4 +58,13 @@ public class WebDropdown {
 			}
 		}
 	}
+	
+	public static String getCurrentSelectdOption(WebElement element) {
+		String selectedVal = null;
+		Select option = new Select(element);
+		if (option != null) {
+			selectedVal = option.getFirstSelectedOption().getText().trim();
+		}
+		return selectedVal;
+	}
 }
