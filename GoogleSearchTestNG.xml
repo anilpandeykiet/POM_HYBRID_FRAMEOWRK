@@ -1,0 +1,10 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="Google Search Tests">
+	<parameter name="baseURL" value="https://www.google.co.in/"></parameter>
+	<test name="Search And Verify">
+		<classes>
+			<class name="googleSearchTests.SearchAndVerifyTest" />
+		</classes>
+	</test>
+</suite>

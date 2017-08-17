@@ -1,0 +1,7 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Master Suite">
+	<suite-files>
+		<suite-file path="GoogleSearchTestNG.xml"></suite-file>
+		<suite-file path="MercuryToursTest.xml"></suite-file>
+	</suite-files>
+</suite>
