@@ -5,6 +5,7 @@ package com.webfactorypkg;
 
 import java.util.HashMap;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -72,8 +73,7 @@ public class LocalWebDriverFactory {
 	private static void launchUrl(String url) {
 		if (driver != null && url != null) {
 			driver.get(url);
-			WebPage.waitForPageLoad(driver);
-			WebPage.waitForJSandJQueryToLoad(driver);
+			driver.manage().timeouts().implicitlyWait(15, TimeUnit.SECONDS);
 		}
 	}
 }

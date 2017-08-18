@@ -21,7 +21,7 @@ public class FlightReservation_FindFlight_Tests extends BaseClass {
 	private static FlightReservation_Login loginPage = null;
 	private static FlightReservation_FlightFinder_Page flightFinderPage = null;
 	private static String testCategory = "Mercury Flight Reservation - Find Flight";
-	
+
 	private static void initialize() {
 		loginPage = new FlightReservation_Login(driver, logger);
 		flightFinderPage = new FlightReservation_FlightFinder_Page(driver, logger);

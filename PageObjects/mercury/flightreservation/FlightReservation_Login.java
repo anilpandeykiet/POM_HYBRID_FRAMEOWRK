@@ -110,8 +110,10 @@ public class FlightReservation_Login {
 		enterUserName(username);
 		enterPassword(password);
 		clickOnSingInButton();
-
+		
 		String pageTitle = driver.getTitle().trim();
+		
+		System.out.println("pageTitle: "+pageTitle);
 		if (pageTitle.equalsIgnoreCase(homePageTitle.trim())) {
 			System.out.println("Login successful");
 			loginStatus = true;
