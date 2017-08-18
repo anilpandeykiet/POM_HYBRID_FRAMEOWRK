@@ -2,13 +2,13 @@
 
 <suite name="Mercury Flight Demo Tests">
 	<parameter name="baseURL" value="http://newtours.demoaut.com/"></parameter>
-	<test name="Login">
+<!-- 	<test name="Login">
 		<parameter name="username" value="demo" />
 		<parameter name="password" value="demo" />
 		<classes>
 			<class name="mercuryflighttests.FlightReservation_LoginTests" />
 		</classes>
-	</test>
+	</test> -->
 	<test name="FindFlight">
 		<parameter name="username" value="demo" />
 		<parameter name="password" value="demo" />

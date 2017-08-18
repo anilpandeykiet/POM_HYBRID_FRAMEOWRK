@@ -24,7 +24,7 @@ public class FlightReservation_LoginTests extends BaseClass {
 	private ExtentTest logger = null;
 
 	private static FlightReservation_Login frLoginPage = null;
-	private static String testCategory = "Mercury Flight Reservation - Login";
+	private static String testCategory = "Mercury Flight Reservation-Login";
 
 	private void intialize() {
 		driver = BaseClass.driver;
