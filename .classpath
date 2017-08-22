@@ -65,5 +65,13 @@
 	<classpathentry kind="lib" path="ImpLibs/MiscellaneousLibs/MailLib/javax.mail-api-1.6.0-rc2-javadoc.jar"/>
 	<classpathentry kind="lib" path="ImpLibs/SeleniumLibs/selenium-java-3.4.0/selenium-api-3.4.0-sources.jar"/>
 	<classpathentry kind="lib" path="ImpLibs/SeleniumLibs/selenium-java-3.4.0/selenium-api-3.4.0-javadoc.jar"/>
+	<classpathentry kind="lib" path="ImpLibs/MobileLibs/5.0.0Beta/java-client-5.0.0-BETA8.jar" sourcepath="ImpLibs/MobileLibs/5.0.0Beta/java-client-5.0.0-BETA8-sources.jar">
+		<attributes>
+			<attribute name="javadoc_location" value="jar:platform:/resource/POM_HYBRID_FRAMEOWRK/ImpLibs/MobileLibs/5.0.0Beta/java-client-5.0.0-BETA8-javadoc.jar!/"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="lib" path="ImpLibs/MobileLibs/5.0.0Beta/java-client-5.0.0-BETA8-sources.jar"/>
+	<classpathentry kind="lib" path="ImpLibs/MobileLibs/5.0.0Beta/commons-validator-1.6.jar"/>
+	<classpathentry kind="lib" path="ImpLibs/MobileLibs/5.0.0Beta/java-client-5.0.0-BETA8-javadoc.jar"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
