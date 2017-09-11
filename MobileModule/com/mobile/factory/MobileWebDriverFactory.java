@@ -17,7 +17,6 @@ import io.appium.java_client.remote.MobileCapabilityType;
 import io.appium.java_client.service.local.AppiumDriverLocalService;
 import io.appium.java_client.service.local.AppiumServerHasNotBeenStartedLocallyException;
 
-
 /**
  * A factory for creating MobileWebDriver objects.
  *
@@ -37,9 +36,9 @@ public class MobileWebDriverFactory {
 
 	/** The appium url. */
 	private static String appiumUrl = null;
-	
-	
-	private MobileWebDriverFactory() {}
+
+	private MobileWebDriverFactory() {
+	}
 
 	/**
 	 * Creates a new MobileWebDriver object.
@@ -52,7 +51,8 @@ public class MobileWebDriverFactory {
 	 *            the browser type
 	 * @return the web driver
 	 */
-	public static WebDriver createDefaultDriverSession(String deviceName, String platform, String browserType, String baseUrl) {
+	public static WebDriver createDefaultDriverSession(String deviceName, String platform, String browserType,
+			String baseUrl) {
 
 		// String appiumServerUrl = startAppiumServer();
 		try {
@@ -97,20 +97,27 @@ public class MobileWebDriverFactory {
 	/**
 	 * Creates a new MobileWebDriver object.
 	 *
-	 * @param deviceName the device name
-	 * @param platform the platform Ex Android, iOS etc
-	 * @param apkAbsolutePath the apk absolute path "could be Web URL for APK </br> or Local APK file"
-	 * @param appPkg the app pkg
-	 * @param appActivity the app activity
+	 * @param deviceName
+	 *            the device name
+	 * @param platform
+	 *            the platform Ex Android, iOS etc
+	 * @param apkAbsolutePath
+	 *            the apk absolute path "could be Web URL for APK </br>
+	 *            or Local APK file"
+	 * @param appPkg
+	 *            the app pkg
+	 * @param appActivity
+	 *            the app activity
 	 * @return the web driver
 	 */
-	public static WebDriver createNewDriverForApp(String deviceName, String platform, String apkAbsolutePath,
-			String appPkg, String appActivity) {
+	public static WebDriver createNewDriverForApp(String deviceName, String platform, String platformVersion,
+			String apkAbsolutePath, String appPkg, String appActivity) {
 
 		try {
 			capabilities = new DesiredCapabilities();
-			capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, platform);
 			capabilities.setCapability(MobileCapabilityType.DEVICE_NAME, deviceName);
+			capabilities.setCapability(MobileCapabilityType.PLATFORM_NAME, platform);
+			capabilities.setCapability("platformVersion", platformVersion);
 			capabilities.setCapability(MobileCapabilityType.APP, apkAbsolutePath);
 			capabilities.setCapability("appPackage", appPkg);
 			capabilities.setCapability("appActivity", appActivity);
@@ -142,10 +149,15 @@ public class MobileWebDriverFactory {
 	 */
 	public static void stopAppiumServer() {
 		try {
-			appiumService.stop();
-			System.out.println("Appium Server stopped");
+			if (appiumService.isRunning()) {
+				appiumService.stop();
+				System.out.println("Appium Server stopped");
+			}else {
+				System.out.println("Appium Server is already stopped");
+			}
+			
 		} catch (Exception e) {
-			System.out.println("Error stopping appium server"+e.getMessage());
+			System.out.println("Error stopping appium server" + e.getMessage());
 		}
 	}
 }

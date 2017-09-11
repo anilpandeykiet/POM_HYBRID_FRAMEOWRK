@@ -90,7 +90,7 @@ public class BaseClass {
 	@AfterSuite
 	public void afterSuite() {
 		reporter.flush();
-		// EmailSender.sendEmail(sendEmail, emailConfigFile);
+		EmailSender.sendEmail(sendEmail, emailConfigFile);
 	}
 
 	public static void reportTestCaseStatus(WebDriver driver, ExtentTest logger, String methodName,
